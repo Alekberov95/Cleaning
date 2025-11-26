@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta_title">Cleaning Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header__inner">
+        <div class="logo" data-i18n="logo">CleanPro</div>
+
+        <button class="burger" id="burgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="nav">
+                <a href="#services" data-i18n="nav_services">Услуги</a>
+                <a href="#calculator" data-i18n="nav_calc">Калькулятор</a>
+                <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
+                <a href="#contact" data-i18n="nav_contact">Контакты</a>
+            </nav>
+
+            <div class="lang-switch mobile-lang">
+                <button data-lang="ru">
+                    <img src="https://flagsapi.com/RU/flat/24.png" alt="RU">
+                    RU
+                </button>
+                <button data-lang="en">
+                    <img src="https://flagsapi.com/GB/flat/24.png" alt="EN">
+                    EN
+                </button>
+            </div>
+        </div>
+
+
+        <nav class="nav">
+            <a href="#services" data-i18n="nav_services">Услуги</a>
+            <a href="#calculator" data-i18n="nav_calc">Калькулятор</a>
+            <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
+            <a href="#contact" data-i18n="nav_contact">Контакты</a>
+        </nav>
+-
+        <!-- LANGUAGE SWITCH -->
+        <div class="lang-switch">
+            <button data-lang="ru">
+                <img src="https://flagsapi.com/RU/flat/24.png" alt="RU">
+                RU
+            </button>
+            <button data-lang="en">
+                <img src="https://flagsapi.com/GB/flat/24.png" alt="EN">
+                EN
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero reveal">
+    <div class="container hero__inner">
+        <h1 data-i18n="hero_title">Профессиональная уборка квартир и офисов</h1>
+        <p data-i18n="hero_sub">Быстро, аккуратно, с гарантией качества</p>
+        <a href="#calculator" class="btn" data-i18n="hero_btn">Рассчитать стоимость</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services reveal">
+    <div class="container">
+        <h2 data-i18n="services_title">Наши услуги</h2>
+        <div class="services__grid">
+
+            <article class="service-card">
+                <div class="service-card__icon">🧼</div>
+                <h3 data-i18n="service1_title">Генеральная уборка</h3>
+                <p data-i18n="service1_text">Глубокая и детальная уборка всех помещений.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-card__icon">🧹</div>
+                <h3 data-i18n="service2_title">Поддерживающая уборка</h3>
+                <p data-i18n="service2_text">Регулярная уборка, чтобы дом всегда был в порядке.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-card__icon">🏗️</div>
+                <h3 data-i18n="service3_title">Уборка после ремонта</h3>
+                <p data-i18n="service3_text">Удаление строительной пыли, пятен и мусора.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" class="calculator reveal">
+    <div class="container">
+        <h2 data-i18n="calc_title">Калькулятор стоимости</h2>
+
+        <form class="calc-form">
+            <label>
+                <span data-i18n="calc_area_label">Площадь (м²):</span>
+                <input
+                        type="number"
+                        id="area"
+                        min="1"
+                        placeholder="например, 80"
+                        data-i18n-placeholder="calc_area_placeholder"
+                />
+            </label>
+
+            <label>
+                <span data-i18n="calc_type_label">Тип уборки:</span>
+                <select id="type">
+                    <option value="general" data-i18n="opt_general">Генеральная</option>
+                    <option value="regular" data-i18n="opt_regular">Поддерживающая</option>
+                    <option value="repair" data-i18n="opt_repair">После ремонта</option>
+                </select>
+            </label>
+
+            <button type="button" id="calcBtn" data-i18n="calc_btn">Рассчитать</button>
+        </form>
+
+        <div id="calcResult" class="calculator__result" data-i18n="calc_result_default">
+            Введите данные и нажмите «Рассчитать»
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews reveal">
+    <div class="container">
+        <h2 data-i18n="reviews_title">Отзывы клиентов</h2>
+
+        <div class="reviews__wrapper">
+            <button class="review-btn prev" aria-label="Предыдущий отзыв">←</button>
+
+            <div class="reviews__slider">
+
+            </div>
+
+            <button class="review-btn next" aria-label="Следующий отзыв">→</button>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery reveal">
+    <div class="container">
+        <h2 data-i18n="gallery_title">Наши работы</h2>
+
+        <div class="gallery__carousel">
+            <button class="gallery-btn prev" aria-label="Предыдущее фото">←</button>
+
+            <div class="gallery__wrapper">
+                <div class="gallery__track">
+
+                </div>
+            </div>
+
+            <button class="gallery-btn next" aria-label="Следующее фото">→</button>
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox__close">×</span>
+            <img src="" alt="Увеличенное фото" class="lightbox__img">
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact reveal">
+    <div class="container">
+        <h2 data-i18n="contact_title">Связаться с нами</h2>
+        <p data-i18n="contact_sub">Оставьте заявку — мы свяжемся с вами в ближайшее время</p>
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-grid">
+                <label>
+                    <span data-i18n="form_name">Ваше имя</span>
+                    <input type="text" name="name" required data-i18n-placeholder="form_name_placeholder" placeholder="Иван Иванов">
+                </label>
+
+                <label>
+                    <span data-i18n="form_phone">Телефон</span>
+                    <input type="tel" name="phone" required data-i18n-placeholder="form_phone_placeholder" placeholder="+7 (999) 123-45-67">
+                </label>
+
+                <label>
+                    <span data-i18n="form_area">Площадь (м²)</span>
+                    <input type="number" name="area" min="1" required data-i18n-placeholder="form_area_placeholder" placeholder="80">
+                </label>
+
+                <label>
+                    <span data-i18n="form_type">Тип уборки</span>
+                    <select name="type" required>
+                        <option value="" disabled selected data-i18n="form_type_default">Выберите тип</option>
+                        <option value="general" data-i18n="opt_general">Генеральная</option>
+                        <option value="regular" data-i18n="opt_regular">Поддерживающая</option>
+                        <option value="repair" data-i18n="opt_repair">После ремонта</option>
+                    </select>
+                </label>
+
+                <label class="full-width">
+                    <span data-i18n="form_address">Адрес</span>
+                    <input type="text" name="address" required data-i18n-placeholder="form_address_placeholder" placeholder="г. Москва, ул. Ленина, д. 10, кв. 25">
+                </label>
+            </div>
+
+            <button type="submit" class="btn submit-btn" data-i18n="form_submit">
+                Отправить заявку
+            </button>
+
+            <div class="form-status" id="formStatus"></div>
+        </form>
+        
+        <div class="telegram-link">
+            <span data-i18n="contact_or">или</span>
+            <a href="https://t.me/your_cleaning_bot" target="_blank" class="btn telegram-btn" data-i18n="contact_btn">
+                Написать в Telegram
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p data-i18n="footer_text">© 2025 CleanPro. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="lang.js"></script>
+<script src="burger.js"></script>
+<script src="script.js"></script>
+<script src="reviews.js"></script>
+<script src="reveal.js"></script>
+<script src="gallery.js"></script>
+
+</body>
+</html>
+
