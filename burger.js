@@ -35,6 +35,8 @@ function toggleMenu() {
 
 burger.addEventListener('click', toggleMenu);
 
+// --- TOUCH HANDLERS ---
+
 menu.addEventListener('touchstart', e => {
     if (!menu.classList.contains('active')) return;
     startX = e.touches[0].clientX;
@@ -47,7 +49,8 @@ menu.addEventListener('touchmove', e => {
     currentX = e.touches[0].clientX;
     const diffX = currentX - startX;
 
-    if (diffX < 0) {
+    // Свайп вправо → меню двигается вправо
+    if (diffX > 0) {
         menu.style.transform = `translateX(${diffX}px)`;
     }
 }, { passive: true });
@@ -59,7 +62,7 @@ menu.addEventListener('touchend', () => {
 
     const diffX = currentX - startX;
 
-    if (diffX < -90) {
+    if (diffX > 90) {
         closeMenu();
     } else {
         menu.style.transform = 'translateX(0)';
@@ -74,3 +77,4 @@ document.addEventListener('click', e => {
         closeMenu();
     }
 });
+
